@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Treino</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <h1>REGISTRO DE TREINO</h1>
+      <p>Escolha o dia da semana e monte os exercícios.</p>
+    </header>
+    
+    <div class="weekdays" id="weekdays"></div>
+    
+    <div class="stats" id="stats"></div>
+    
+    <div id="list"></div>
+  </div>
+  
+  <button class="fab" id="openBtn" title="Adicionar exercício">+</button>
+  
+  <div class="overlay" id="overlay">
+    <div class="sheet">
+      <div class="sheet-header">
+        <h2 id="sheetTitle">Novo exercício</h2>
+        <button class="close" id="closeBtn" title="Fechar">✕</button>
+      </div>
+      <form id="form" novalidate>
+        <div class="field">
+          <label for="exercicio">Exercício</label>
+          <input id="exercicio" type="text" placeholder="Ex: Supino reto" autocomplete="off">
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="carga">Carga (kg)</label>
+            <input id="carga" type="number" inputmode="decimal" step="0.5" min="0" placeholder="0">
+          </div>
+          <div class="field">
+            <label for="series">Séries</label>
+            <input id="series" type="number" inputmode="numeric" min="1" placeholder="0">
+          </div>
+          <div class="field">
+            <label for="reps">Reps</label>
+            <input id="reps" type="number" inputmode="numeric" min="1" placeholder="opcional">
+          </div>
+        </div>
+        <div class="error-msg" id="errorMsg"></div>
+        <button type="submit" class="submit" id="submitBtn">Adicionar</button>
+      </form>
+    </div>
+  </div>
+  
+  <script src="main.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>
