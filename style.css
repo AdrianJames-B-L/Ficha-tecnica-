@@ -63,7 +63,7 @@
       font-family: 'Arial Narrow', Arial, sans-serif;
       font-stretch: condensed;
       font-weight: 700;
-      font-size: 10px;
+      font-size: 25px;
       letter-spacing: 1px;
       margin: 0;
       line-height: 1;
@@ -446,7 +446,7 @@
     
     input.invalid {
       border-color: var(--danger);
-    }      flex-direction: column;
+        flex-direction: column;
       justify-content: center;
       align-items: center;
     }
