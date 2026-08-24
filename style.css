@@ -29,6 +29,7 @@
     }
     
     header {
+      
       padding: 10px;
   border-bottom: 1px solid var(--line);
   margin-bottom: 20px;
@@ -59,14 +60,15 @@
   align-items: center;
     }
     
-    h1 {
+    .titulo {
       font-family: 'Arial Narrow', Arial, sans-serif;
-      font-stretch: condensed;
+      
       font-weight: 700;
-      font-size: 15px;
+      font-size: 25px;
       letter-spacing: 1px;
       margin: 0;
       line-height: 1;
+      
     }
     
     header p {
