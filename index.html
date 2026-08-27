@@ -4,6 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
   <title>Registro de Treino</title>
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
@@ -36,20 +40,20 @@
       <form id="form" novalidate>
         <div class="field">
           <label for="exercicio">Exercício</label>
-          <input id="exercicio" type="text" placeholder="Ex: Supino reto" autocomplete="off">
+          <input id="exercicio" type="text" placeholder="Ex: Supino reto" autocomplete="off" maxlength="100">
         </div>
         <div class="row">
           <div class="field">
             <label for="carga">Carga (kg)</label>
-            <input id="carga" type="number" inputmode="decimal" step="0.5" min="0" placeholder="0">
+            <input id="carga" type="number" inputmode="decimal" step="0.5" min="0" max="1000" placeholder="0">
           </div>
           <div class="field">
             <label for="series">Séries</label>
-            <input id="series" type="number" inputmode="numeric" min="1" placeholder="0">
+            <input id="series" type="number" inputmode="numeric" min="1" max="100" placeholder="0">
           </div>
           <div class="field">
             <label for="reps">Reps</label>
-            <input id="reps" type="number" inputmode="numeric" min="1" placeholder="opcional">
+            <input id="reps" type="number" inputmode="numeric" min="1" max="1000" placeholder="opcional">
           </div>
         </div>
         <div class="error-msg" id="errorMsg"></div>
