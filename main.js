@@ -98,17 +98,7 @@ window.addEventListener('error', function(e) {
         const dayEntries = entries.filter(e => e.weekday === activeWeekday);
         
         
-        /*const totalVolume = dayEntries.reduce((sum,e) => sum + (e.carga * e.series), 0);
-        statsEl.innerHTML = `
-          <div class="stat">
-            <div class="num">${dayEntries.length}</div>
-            <div class="label">Exercícios${activeWeekday === todayWeekday ? ' hoje' : ''}</div>
-          </div>
-          <div class="stat">
-            <div class="num">${totalVolume}</div>
-            <div class="label">Kg totais</div>
-          </div>
-        `;*/
+       
         
         if (!loaded) {
           listEl.innerHTML = '<div class="status">Carregando...</div>';
