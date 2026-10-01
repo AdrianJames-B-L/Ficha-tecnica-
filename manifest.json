@@ -17,5 +17,12 @@
     }
   ],
   "background_color": "#121210",
-  "scope": "./"
+  "scope": "./",
+  "id": "./index.html",
+  "lang": "pt-BR",
+  "description": "Registre seus exercícios.",
+  "categories": [
+    "health",
+    "fitness"
+  ]
 }
