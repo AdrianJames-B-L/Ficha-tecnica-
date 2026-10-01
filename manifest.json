@@ -1,9 +1,9 @@
 {
   "name": "Registro de treino",
   "short_name": "Registro de treino",
-  "start_url": "index.html",
+  "start_url": "./index.html",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#121210",
   "icons": [
     {
       "src": "img/android-chrome-192x192.png",
@@ -15,5 +15,7 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ]
+  ],
+  "background_color": "#121210",
+  "scope": "./"
 }
