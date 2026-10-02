@@ -13,7 +13,6 @@ const ARQUIVOS = [
 self.addEventListener('install', e => {
   e.waitUntil(
     caches.open(CACHE).then(c =>
-      // Tenta cada arquivo separadamente: se um não existir, os outros continuam
       Promise.all(ARQUIVOS.map(a => c.add(a).catch(() => {})))
     )
   );
