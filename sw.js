@@ -1,4 +1,4 @@
-const CACHE = 'treino-v1';
+const CACHE = 'treino-v2';
 const ARQUIVOS = [
   './',
   './index.html',
@@ -30,5 +30,13 @@ self.addEventListener('activate', e => {
 
 self.addEventListener('fetch', e => {
   if (e.request.method !== 'GET') return;
-  e.respondWith(caches.match(e.request).then(r => r || fetch(e.request)));
+  e.respondWith(
+    fetch(e.request).then(res => {
+      if (res.ok) {
+        const copia = res.clone();
+        caches.open(CACHE).then(c => c.put(e.request, copia));
+      }
+      return res;
+    }).catch(() => caches.match(e.request).then(r => r || caches.match('./index.html')))
+  );
 });
